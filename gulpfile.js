@@ -15,7 +15,7 @@ function lint() {
 }
 
 function test() {
-  return gulp.src('test/**/*.js')
+  return gulp.src('spec/**/*.js')
     .pipe(jasmine());
 }
 
