@@ -1,24 +1,37 @@
 const eslint = require('gulp-eslint');
 const gulp = require('gulp');
-const plumber = require('gulp-plumber');
-const jasmine = require('gulp-jasmine');
+const gutil = require('gulp-util');
+const mocha = require('gulp-mocha');
 
-function lint() {
-  return gulp.src(['src/**/*.js',
-      'spec/**/*.js',
-      '.*.js',
-      '*.js'
-    ])
-    .pipe(plumber())
+const sources = ['src/**/*.js',
+  'test/**/*.js',
+  '.*.js',
+  '*.js'
+];
+
+function linter() {
+  return gulp.src(sources)
     .pipe(eslint())
-    .pipe(eslint.format());
+    .pipe(eslint.format())
+    // Break on failure to be super strict
+    .pipe(eslint.failOnError());
 }
 
-function test() {
-  return gulp.src('spec/**/*.js')
-    .pipe(jasmine());
+function testMocha() {
+  return gulp.src(['test/**/*.js'], {
+    read: false,
+  }).pipe(mocha({
+    reporter: 'list',
+  })).on('error', gutil.log);
 }
 
-gulp.task('lint', lint);
-gulp.task('test', ['lint'], test);
+gulp.task('lint', linter);
+
+gulp.task('test', ['lint'], testMocha);
+
+// Rerun the task when a file changes
+gulp.task('watch', () => {
+  gulp.watch(sources, ['test']);
+});
+
 gulp.task('default', ['test']);
