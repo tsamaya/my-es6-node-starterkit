@@ -13,7 +13,10 @@ In order to download dependencies and build the app via the command line, you wi
 1. `$ npm install` to install all the required dependencies from `npm`
 1. lint and test using:
   1. or `$ npm test`, `$ npm run lint`
-  1. or with gulp-cli installed gloablly `$ gulp lint`, `$ gulp test`.
+  1. or with gulp-cli installed gloablly :
+    `$ gulp lint`,
+    `$ gulp test`
+1. coverage with [istanbul](https://istanbul.js.org/): `$ npm run coverage`
 
 # Features
 
@@ -22,4 +25,4 @@ In order to download dependencies and build the app via the command line, you wi
 
 # Licensing
 
-MIT
+[MIT](LICENSE)
