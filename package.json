@@ -23,16 +23,16 @@
     "url": "https://github.com/tsamaya/my-es6-node-starterkit.git"
   },
   "scripts": {
-    "prebuild": "npm test",
     "build": "webpack -d",
     "codecov": "codecov",
     "coverage": "npm run test && npm run codecov",
     "lint": "eslint .",
-    "start": "npm run webpack",
-    "webpack": "webpack -d --watch",
+    "prebuild": "npm test",
     "pretest": "npm run lint",
+    "start": "npm run webpack",
     "test": "jest --coverage",
-    "test:watch": "npm test -- --watch"
+    "test:watch": "npm test -- --watch",
+    "webpack": "webpack -d --watch"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
