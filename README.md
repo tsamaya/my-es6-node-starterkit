@@ -4,6 +4,8 @@ A boilerplate for writing node module using es6 with webpack, jest, and eslint.
 
 [![Build Status](https://travis-ci.org/tsamaya/my-es6-node-starterkit.svg?branch=master)](https://travis-ci.org/tsamaya/my-es6-node-starterkit)
 [![codecov](https://codecov.io/gh/tsamaya/my-es6-node-starterkit/branch/master/graph/badge.svg)](https://codecov.io/gh/tsamaya/my-es6-node-starterkit)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+
 # Getting started
 
 1. Fork or clone this repository

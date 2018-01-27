@@ -1,12 +1,9 @@
 module.exports = {
   extends: [
-    'airbnb-base', 'plugin:jest/recommended'
+    'airbnb-base', 'plugin:jest/recommended', 'prettier'
   ],
   plugins: ['jest'],
-  rules: {
-    'comma-dangle': 0,
-    'no-console': 0,
-},
+  rules: {},
   env: {
     'node': true,
     'jest/globals': true

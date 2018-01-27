@@ -5,12 +5,12 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        exclude: /node_modules/
-      }
-    ]
+        exclude: /node_modules/,
+      },
+    ],
   },
   output: {
     libraryTarget: 'commonjs',
-    filename: './index.js'
+    filename: './index.js',
   },
 };

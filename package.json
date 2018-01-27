@@ -29,6 +29,7 @@
     "lint": "eslint .",
     "prebuild": "npm test",
     "pretest": "npm run lint",
+    "prettier": "./node_modules/.bin/prettier  --config .prettierrc --write src/**/*.js __tests__/**/*.js",
     "start": "npm run webpack",
     "test": "jest --coverage",
     "test:watch": "npm test -- --watch",
