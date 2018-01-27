@@ -1,14 +1,14 @@
 module.exports = {
-  extends: 'airbnb-base',
-  plugins: [
-    'import'
+  extends: [
+    'airbnb-base', 'plugin:jest/recommended'
   ],
+  plugins: ['jest'],
   rules: {
-    // disable requiring trailing commas because it might be nice to revert to
-    // being JSON at some point, and I don't want to make big changes now.
-    'comma-dangle': 0
-  },
+    'comma-dangle': 0,
+    'no-console': 0,
+},
   env: {
-    mocha: true
+    'node': true,
+    'jest/globals': true
   }
 };
