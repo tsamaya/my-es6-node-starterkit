@@ -23,6 +23,8 @@
     "url": "https://github.com/tsamaya/my-es6-node-starterkit.git"
   },
   "scripts": {
+    "prebuild": "npm test",
+    "build": "webpack -d",
     "codecov": "codecov",
     "coverage": "npm run test && npm run codecov",
     "lint": "eslint .",
