@@ -17,7 +17,7 @@ A boilerplate for writing node module using es6 with webpack, jest, and eslint.
 
 # Features
 
-- Sanely configured `babel`, `webpack`, `prettier`, `.gitignore`, `.editorconfig`
+- Sanely configured `babel`, `webpack`, `prettier`, `.gitignore`
 - Linting and testing are pre-configured using `eslint`, `jest`.
 
 # Licensing
