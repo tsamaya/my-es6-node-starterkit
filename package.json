@@ -23,11 +23,12 @@
     "url": "https://github.com/tsamaya/my-es6-node-starterkit.git"
   },
   "lint-staged": {
-    "*.{js,json}": [
+    "*.{js}": [
       "prettier --write",
+      "eslint --fix",
       "git add"
     ],
-    "*.{css,md}": [
+    "*.{json,css,md}": [
       "prettier --write",
       "git add"
     ]
