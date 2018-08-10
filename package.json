@@ -17,7 +17,8 @@
   "bugs": "https://github.com/tsamaya/my-es6-node-starterkit/issues",
   "license": "MIT",
   "author": "Arnaud Ferrand",
-  "main": "index.js",
+  "main": "./dist/es6-node-starterkit.js",
+  "browser": "./dist/es6-starterkit.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/tsamaya/my-es6-node-starterkit.git"
