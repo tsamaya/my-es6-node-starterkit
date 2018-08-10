@@ -17,7 +17,7 @@ const nodeConfig = {
 
 const browserConfig = {
   entry: './src/index.js',
-  target: 'node',
+  target: 'web',
   module: {
     rules: [
       {
@@ -27,6 +27,7 @@ const browserConfig = {
     ],
   },
   output: {
+    library: 'es6starterkit',
     libraryTarget: 'umd',
     filename: './es6-starterkit.js',
   },
