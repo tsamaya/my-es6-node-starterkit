@@ -3,11 +3,11 @@
 		module.exports = factory();
 	else if(typeof define === 'function' && define.amd)
 		define([], factory);
-	else {
-		var a = factory();
-		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
-	}
-})(global, function() {
+	else if(typeof exports === 'object')
+		exports["es6starterkit"] = factory();
+	else
+		root["es6starterkit"] = factory();
+})(window, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -104,7 +104,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _math__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./math */ \"./src/math.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"sum\", function() { return _math__WEBPACK_IMPORTED_MODULE_0__[\"sum\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"diff\", function() { return _math__WEBPACK_IMPORTED_MODULE_0__[\"diff\"]; });\n\n\n\n/**\n * main module : export math functions\n */\n\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvaW5kZXguanMuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvaW5kZXguanM/YjYzNSJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBzdW0sIGRpZmYgfSBmcm9tICcuL21hdGgnO1xuXG4vKipcbiAqIG1haW4gbW9kdWxlIDogZXhwb3J0IG1hdGggZnVuY3Rpb25zXG4gKi9cbmV4cG9ydCB7IHN1bSwgZGlmZiB9O1xuIl0sIm1hcHBpbmdzIjoiQUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7Iiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/index.js\n");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _math__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./math */ \"./src/math.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"sum\", function() { return _math__WEBPACK_IMPORTED_MODULE_0__[\"sum\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"diff\", function() { return _math__WEBPACK_IMPORTED_MODULE_0__[\"diff\"]; });\n\n\n\n/**\n * main module : export math functions\n */\n\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvaW5kZXguanMuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9lczZzdGFydGVya2l0Ly4vc3JjL2luZGV4LmpzP2I2MzUiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgc3VtLCBkaWZmIH0gZnJvbSAnLi9tYXRoJztcblxuLyoqXG4gKiBtYWluIG1vZHVsZSA6IGV4cG9ydCBtYXRoIGZ1bmN0aW9uc1xuICovXG5leHBvcnQgeyBzdW0sIGRpZmYgfTtcbiJdLCJtYXBwaW5ncyI6IkFBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOyIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./src/index.js\n");
 
 /***/ }),
 
@@ -116,7 +116,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mat
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"sum\", function() { return sum; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"diff\", function() { return diff; });\n/**\n * sum operation\n * @param  {Number} a number value\n * @param  {Number} b number value\n * @return {Number}   number value (a+b)\n */\nconst sum = (a, b) => Number(a) + Number(b);\n\n/**\n * diff operation\n * @param  {Number} a number value\n * @param  {Number} b number value\n * @return {Number}   number value (a-b)\n */\nconst diff = (a, b) => Number(a) - Number(b);\n\n/**\n * export functions\n */\n\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvbWF0aC5qcy5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL3NyYy9tYXRoLmpzPzVhMDMiXSwic291cmNlc0NvbnRlbnQiOlsiLyoqXG4gKiBzdW0gb3BlcmF0aW9uXG4gKiBAcGFyYW0gIHtOdW1iZXJ9IGEgbnVtYmVyIHZhbHVlXG4gKiBAcGFyYW0gIHtOdW1iZXJ9IGIgbnVtYmVyIHZhbHVlXG4gKiBAcmV0dXJuIHtOdW1iZXJ9ICAgbnVtYmVyIHZhbHVlIChhK2IpXG4gKi9cbmNvbnN0IHN1bSA9IChhLCBiKSA9PiBOdW1iZXIoYSkgKyBOdW1iZXIoYik7XG5cbi8qKlxuICogZGlmZiBvcGVyYXRpb25cbiAqIEBwYXJhbSAge051bWJlcn0gYSBudW1iZXIgdmFsdWVcbiAqIEBwYXJhbSAge051bWJlcn0gYiBudW1iZXIgdmFsdWVcbiAqIEByZXR1cm4ge051bWJlcn0gICBudW1iZXIgdmFsdWUgKGEtYilcbiAqL1xuY29uc3QgZGlmZiA9IChhLCBiKSA9PiBOdW1iZXIoYSkgLSBOdW1iZXIoYik7XG5cbi8qKlxuICogZXhwb3J0IGZ1bmN0aW9uc1xuICovXG5leHBvcnQgeyBzdW0sIGRpZmYgfTtcbiJdLCJtYXBwaW5ncyI6IkFBQUE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTsiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/math.js\n");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"sum\", function() { return sum; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"diff\", function() { return diff; });\n/**\n * sum operation\n * @param  {Number} a number value\n * @param  {Number} b number value\n * @return {Number}   number value (a+b)\n */\nconst sum = (a, b) => Number(a) + Number(b);\n\n/**\n * diff operation\n * @param  {Number} a number value\n * @param  {Number} b number value\n * @return {Number}   number value (a-b)\n */\nconst diff = (a, b) => Number(a) - Number(b);\n\n/**\n * export functions\n */\n\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvbWF0aC5qcy5qcyIsInNvdXJjZXMiOlsid2VicGFjazovL2VzNnN0YXJ0ZXJraXQvLi9zcmMvbWF0aC5qcz81YTAzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogc3VtIG9wZXJhdGlvblxuICogQHBhcmFtICB7TnVtYmVyfSBhIG51bWJlciB2YWx1ZVxuICogQHBhcmFtICB7TnVtYmVyfSBiIG51bWJlciB2YWx1ZVxuICogQHJldHVybiB7TnVtYmVyfSAgIG51bWJlciB2YWx1ZSAoYStiKVxuICovXG5jb25zdCBzdW0gPSAoYSwgYikgPT4gTnVtYmVyKGEpICsgTnVtYmVyKGIpO1xuXG4vKipcbiAqIGRpZmYgb3BlcmF0aW9uXG4gKiBAcGFyYW0gIHtOdW1iZXJ9IGEgbnVtYmVyIHZhbHVlXG4gKiBAcGFyYW0gIHtOdW1iZXJ9IGIgbnVtYmVyIHZhbHVlXG4gKiBAcmV0dXJuIHtOdW1iZXJ9ICAgbnVtYmVyIHZhbHVlIChhLWIpXG4gKi9cbmNvbnN0IGRpZmYgPSAoYSwgYikgPT4gTnVtYmVyKGEpIC0gTnVtYmVyKGIpO1xuXG4vKipcbiAqIGV4cG9ydCBmdW5jdGlvbnNcbiAqL1xuZXhwb3J0IHsgc3VtLCBkaWZmIH07XG4iXSwibWFwcGluZ3MiOiJBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7Iiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/math.js\n");
 
 /***/ })
 
