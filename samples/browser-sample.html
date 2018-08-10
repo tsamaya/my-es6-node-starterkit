@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>my es6 starter kit Sample</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">My es6 starterkit</h1>
+            <h2 class="title">sum(a,b) and diff(a,b)</h2>
+            <!-- Value A -->
+            <div class="field">
+                <label class="label">Value `a`</label>
+                <div class="control has-icons-left">
+                    <input class="input" type="text" placeholder="number" name="a">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-edit"></i>
+                    </span>
+                </div>
+            </div>
+            <!-- Value B -->
+            <div class="field">
+                <label class="label">Value `b`</label>
+                <div class="control has-icons-left">
+                    <input class="input" type="text" placeholder="number" name="b">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-edit"></i>
+                    </span>
+                </div>
+            </div>
+            <!-- Submit / cancel -->
+            <div class="field is-grouped">
+                <div class="control">
+                    <button class="button is-link sum">Sum</button>
+                </div>
+                <div class="control">
+                    <button class="button is-link diff">Diff</button>
+                </div>
+                <div class="control">
+                    <button class="button is-text">Cancel</button>
+                </div>
+            </div>
+            <h2 class="title">Result</h2>
+            <!-- Result -->
+            <div class="field">
+                <textarea class="textarea" rows="15"></textarea>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="../dist/es6-starterkit.js"></script>
+    <script>
+        function clear() {
+            $('.textarea').val('');
+        }
+        function raz() {
+            $('input[name="a"]').val('');
+            $('input[name="b"]').val('');
+        }
+
+        function check() {
+            if ($('input[name="a"]').val() === '') {
+                return false;
+            }
+            if ($('input[name="b"]').val() === '') {
+                return false;
+            }
+            return true;
+        }
+
+        $('.button.is-text').click(function () {
+            console.log('cancel button clicked');
+            clear();
+            raz();
+        });
+
+        $('.button.is-link.sum').click(function () {
+            console.log('sum button clicked');
+            clear();
+            if (!check()) {
+                return;
+            }
+
+            const a = $('input[name="a"]').val();
+            const b = $('input[name="b"]').val();
+            const data = es6starterkit.sum(a, b);
+            $('.textarea').val(data);
+        });
+
+        $('.button.is-link.diff').click(function () {
+            console.log('diff button clicked');
+            clear();
+            if (!check()) {
+                return;
+            }
+
+            const a = $('input[name="a"]').val();
+            const b = $('input[name="b"]').val();
+            const data = es6starterkit.diff(a, b);
+            $('.textarea').val(data);
+        });
+    </script>
+</body>
+
+</html>
