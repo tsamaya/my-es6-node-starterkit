@@ -54,12 +54,13 @@
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.13.0",
-    "eslint-plugin-jest": "^21.18.0",
+    "eslint-plugin-jest": "^21.20.0",
     "eslint-plugin-prettier": "^2.6.2",
     "husky": "^0.14.3",
     "jest": "^22.4.4",
     "lint-staged": "^6.1.1",
     "prettier": "^1.14.2",
-    "webpack": "^3.12.0"
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0"
   }
 }
